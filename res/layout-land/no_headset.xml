@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginLeft="373dp"
+                android:id="@+id/no_headset"
+    >
+
+    <!--<include layout="@layout/layout_main"/>-->
+    <LinearLayout
+        android:id="@+id/no_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="122dp"
+        >
+        <TextView
+            android:id="@+id/no_eaphone_text"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/tv_shape"
+            android:text="@string/toast"
+            android:textColor="@color/white_color"
+            android:textSize="18sp"
+            />
+    </LinearLayout>
+</RelativeLayout>

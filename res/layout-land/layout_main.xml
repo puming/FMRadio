@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:id="@+id/main_view">
+
+    <Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"></Toolbar>
+
+    <RelativeLayout
+        android:id="@+id/rl_fm"
+        android:layout_width="373dp"
+        android:layout_height="399dp"
+        android:layout_below="@id/toolbar">
+
+        <ImageView
+            android:layout_width="312dp"
+            android:layout_height="312dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/radio_bg" />
+
+        <TextView
+            android:textStyle="normal"
+            android:id="@+id/station_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/station_value_size" />
+
+        <TextView
+            android:id="@+id/text_fm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/station_value"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="26dp"
+            android:text="@string/fm"
+            android:textColor="#504f4f"
+            android:textSize="@dimen/text_fm_size" />
+
+        <ImageView
+            android:id="@+id/button_add_to_favorite"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/station_value"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/icon_btn_favorite_off" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_scale_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/rl_fm"
+        android:layout_centerVertical="true"
+        >
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_toRightOf="@id/rl_fm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="76dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="53dp"
+        android:paddingRight="53dp">
+
+        <ImageView
+            android:id="@+id/button_prevstation"
+            android:layout_width="63dp"
+            android:layout_height="63dp"
+            android:layout_weight="1"
+            android:src="@drawable/radio_btn_previewa_rest" />
+
+        <LinearLayout
+            android:id="@+id/play_button_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+            <LinearLayout
+                android:id="@+id/play_button_inner_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+                <ImageView
+                    android:id="@+id/play_button"
+                    android:layout_width="92dp"
+                    android:layout_height="92dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/radio_btn_start_rest" />
+            </LinearLayout>
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/button_nextstation"
+            android:layout_width="63dp"
+            android:layout_height="63dp"
+            android:layout_weight="1"
+            android:src="@drawable/radio_btn_next_rest" />
+    </LinearLayout>
+</RelativeLayout>

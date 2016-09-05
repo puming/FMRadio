@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    tools:context="com.android.fmradio.FmRecordListActivity"
+    >
+
+    <com.android.fmradio.views.XToolBar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        ></com.android.fmradio.views.XToolBar>
+
+
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/rl_menu"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentLeft="true"-->
+    <!--android:layout_alignParentTop="true"-->
+    <!-->-->
+
+    <!--<Toolbar-->
+    <!--android:id="@+id/toolbar"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="56dp"-->
+    <!--></Toolbar>-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/iv_delete"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentRight="true"-->
+    <!--android:layout_alignTop="@+id/cb_check"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:layout_marginRight="12dp"-->
+    <!--android:src="@drawable/radio_btn_delete"-->
+    <!--android:visibility="visible"-->
+    <!--/>-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/iv_rename"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignTop="@+id/cb_check"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:layout_marginRight="21dp"-->
+    <!--android:layout_toLeftOf="@+id/iv_delete"-->
+    <!--android:src="@drawable/radio_btn_rename_rest"-->
+    <!--android:visibility="visible"-->
+    <!--/>-->
+
+    <!--<CheckBox-->
+    <!--android:id="@+id/cb_check"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:layout_marginRight="21dp"-->
+    <!--android:layout_toLeftOf="@+id/iv_rename"-->
+    <!--android:button="@drawable/checkbox_selector"-->
+    <!--android:visibility="visible"-->
+    <!--/>-->
+
+    <!--</RelativeLayout>-->
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/toolbar"
+        android:background="@color/line"
+        />
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/line"
+        ></ListView>
+
+    <TextView
+        android:id="@+id/tv_empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/fmrecord_list_empty"
+        android:textColor="#FFFFFF"
+        />
+
+</RelativeLayout>

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg">
+
+    <Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        ></Toolbar>
+
+    <FrameLayout
+        android:layout_below="@id/toolbar"
+        android:layout_width="373dp"
+        android:layout_height="399dp"
+        android:foregroundGravity="center">
+
+        <ImageView
+            android:layout_width="312dp"
+            android:layout_height="312dp"
+            android:layout_gravity="center"
+            android:scaleType="fitCenter"
+            android:src="@drawable/radio_bg" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <LinearLayout
+                android:id="@+id/timer_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginBottom="40dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/minutes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/timer_default"
+                    android:textColor="#504f4f"
+                    android:textSize="@dimen/fm_recording_minutes_text_size" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/timer_colon"
+                    android:textColor="#504f4f"
+                    android:textSize="@dimen/fm_recording_colon_text_size" />
+
+                <TextView
+                    android:id="@+id/seconds"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/timer_default"
+                    android:textColor="#504f4f"
+                    android:textSize="@dimen/fm_recording_seconds_text_size" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/station_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/timer_text"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/frequency"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#504f4f"
+                        android:textSize="@dimen/fm_recording_frequency_text_size" />
+
+                    <LinearLayout
+                        android:id="@+id/station_name_rt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="24dip"
+                        android:layout_marginTop="12dip"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/station_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:alpha="0.54"
+                            android:ellipsize="end"
+                            android:fontFamily="sans-serif-medium"
+                            android:singleLine="true"
+                            android:textColor="#000000"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/radio_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="6dip"
+                            android:alpha="0.54"
+                            android:ellipsize="end"
+                            android:fontFamily="sans-serif"
+                            android:singleLine="true"
+                            android:textColor="#000000"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="13dp"
+                    android:layout_height="match_parent" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true" >
+                    <com.android.fmradio.views.FmVisualizerView
+                        android:id="@+id/fm_play_indicator"
+                        android:layout_width="24dip"
+                        android:layout_height="24dip"
+                        android:alpha="0.54" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+
+    </FrameLayout>
+
+    <Button
+        android:layout_marginEnd="76dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:id="@+id/btn_stop_record"
+        android:layout_width="92dp"
+        android:layout_height="92dp"
+        android:background="@drawable/radio_btn_done_selector" />
+
+</RelativeLayout>
